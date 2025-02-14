@@ -1,0 +1,193 @@
+:root {
+  /* COLORS */
+  --dark-background-color: #000;
+  --navy-background-color: #00283a;
+  --smoke-background-color: #f8f8f8;
+  --light-background-color: #fff;
+  --mute-background-color: #7b7b7b;
+  --accent-background-color: black;
+
+  --dark-color: #000;
+  --navy-color: rgba(0, 40, 58, 1);
+  --smoke-color: #f8f8f8;
+  --light-color: #fff;
+  --mute-color: #7b7b7b;
+  --accent-color: blue;
+
+  /* --dark-color: #222; */
+  /* --smoke-color: #f8f8f8;
+  --secondary_fade-color: #464646;
+  --tertiary-color: black;
+  --accent-color: black;
+
+  --mute-color: #7b7b7b; */
+
+  /* COLORS OPAQUE */
+  --dark_opaque-background-color: rgba(0, 0, 0, 0.7);
+  --navy_opaque-background-color: rgba(0, 40, 58, 0.7);
+  --smoke_opaque-background-color: rgba(248, 248, 248, 0.7);
+  --light_opaque-background-color: rgba(255, 255, 255, 0.7);
+  --mute_opaque-background-color: rgba(123, 123, 123, 0.7);
+  --accent_opaque-background-color: black;
+
+  /* MEASURES */
+  --width-XS: 575px; /* Extra Small (XS) Below 576px (Phones) */
+  --width-SM: 767px; /* Small (XS) Below 767px (tablets) */
+  --width-MD: 991px; /* Medium (MD) Below 991px (laptops) */
+  --width-LG: 1999px; /* Large (LG) Below 1999px (large screens) */
+  --width-XL: 1399px; /* Extra Large (XL) Below 1399px (really large screen) */
+
+  --navbar-height: 58px;
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+
+  font-family: 'Poiret One', serif;
+  font-style: normal;
+
+  outline: 1px solid transparent;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* For WebKit-based browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px; /* for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color when hovered */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+.App {
+  /* position: relative; */
+  margin: 0;
+  padding: 0;
+  width: 100dvw;
+  width: 100%;
+  height: auto;
+  min-height: 100dvh;
+  background: var(--smoke-background-color);
+}
+
+.app-container {
+  position: relative;
+  margin: auto;
+  width: min(100%, var(--width-XL));
+  height: auto;
+  min-height: 30px;
+  padding: 0.3rem 5rem;
+  /* outline-color: red; */
+}
+
+.modal,
+.modal-slide {
+  position: fixed;
+  /* z-index: 999; */
+  height: 100dvh;
+  width: 100dvw;
+  top: 0px;
+  right: 0;
+  transition: all 0.2s ease-in-out;
+
+  &::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: var(--dark-background-color);
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+}
+.modal-slide {
+  width: 0;
+
+  &.open {
+    width: 100dvw;
+  }
+}
+
+.app-cursor {
+  position: fixed;
+  z-index: 950;
+  height: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 40%;
+  left: 50%;
+  background-color: var(--accent-background-color);
+  outline: 1px solid var(--dark-background-color);
+  display: none;
+}
+
+.page {
+  position: relative;
+
+  &.home {
+    position: relative;
+    height: auto;
+    min-height: calc(100dvh - 55px);
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .app-container {
+    padding: 0.3rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .app-container {
+    padding: 0.3rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .app-container {
+    padding: 0.3rem 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .app-container {
+    padding: 0.3rem 0.5rem;
+  }
+}
+
+/* @media only screen and (max-width: 1199px) {
+}
+
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (max-width: 575px) {
+} */

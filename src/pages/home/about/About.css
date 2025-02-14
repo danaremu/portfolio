@@ -1,0 +1,42 @@
+.about {
+  position: relative;
+  height: auto;
+  min-height: 100dvh;
+  top: calc(var(--navbar-height) * -1);
+  width: 100%;
+  color: var(--smoke-color);
+  background-color: var(--dark-background-color);
+
+  &::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-image: linear-gradient(
+      180deg,
+      var(--navy_opaque-background-color),
+      var(--dark-background-color)
+    );
+    display: none;
+  }
+
+  & .app-container {
+    min-height: inherit;
+    /* display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-wrap: nowrap;
+    gap: 5rem; */
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+}
+
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (max-width: 575px) {
+}

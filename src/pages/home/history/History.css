@@ -1,0 +1,18 @@
+.history {
+  display: flex;
+  justify-content: end;
+
+  & .history-inner {
+    height: 100dvh;
+    width: min(100%, 768px);
+    background-color: var(--smoke-background-color);
+    overflow-y: auto;
+
+    & .history-content {
+      height: auto;
+      min-height: 130dvh;
+      width: 100%;
+      padding: 2rem 1rem;
+    }
+  }
+}

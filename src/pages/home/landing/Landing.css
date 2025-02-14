@@ -1,0 +1,239 @@
+.landing {
+  position: relative;
+  height: auto;
+  min-height: 100dvh;
+  top: calc(var(--navbar-height) * -1);
+  width: 100%;
+  color: var(--smoke-color);
+
+  background-image: url('./../../../compx/media/background_img.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-image: linear-gradient(
+      180deg,
+      var(--navy_opaque-background-color),
+      var(--dark-background-color)
+    );
+  }
+
+  & .app-container {
+    min-height: inherit;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-wrap: nowrap;
+    gap: 5rem;
+    padding: 0;
+
+    & .grid-branding {
+      width: auto;
+      height: calc(100dvh - 50px - 6rem);
+      writing-mode: sideways-lr;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-self: flex-end;
+      margin-bottom: 2rem;
+      font-size: 0.8rem;
+
+      &::after,
+      &::before {
+        position: relative;
+        white-space: nowrap;
+        height: auto;
+        color: var(--smoke-color);
+      }
+      &::before {
+        content: attr(data-year);
+        padding-top: 0.5rem;
+      }
+      &::after {
+        content: attr(data-title);
+        white-space: nowrap;
+        padding-bottom: 0.5rem;
+      }
+
+      & .grid-branding_line {
+        height: 100%;
+        width: 2px;
+        background-color: var(--smoke-background-color);
+      }
+    }
+
+    & .grid-greet {
+      position: relative;
+      height: auto;
+      width: auto;
+      align-self: center;
+
+      & > * {
+        padding: 0;
+        margin: 0;
+        font-size: clamp(5em, 14vw, 10em);
+      }
+      & p.grid-greet_p {
+        font-size: clamp(1em, 2vw, 2em);
+        text-shadow: 0 0 2px var(--dark-color);
+        padding-left: 0.5em;
+
+        &::before {
+          position: relative;
+          content: '';
+          width: 20px;
+          height: 3px;
+          background-color: var(--dark-background-color);
+        }
+      }
+    }
+
+    & .grid-image {
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      padding: 0;
+      margin: 0;
+      right: 0;
+      background-color: transparent;
+      background-image: url('./../../../compx/media/portfolio-img_clear.png');
+      background-position: right bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+      bottom: 0;
+      overflow: hidden;
+      /* filter: grayscale(0.4); */
+
+      &::before {
+        position: absolute;
+        content: '';
+        inset: 0;
+        bottom: -2px;
+        /* opacity: 0.45; */
+        background-image: linear-gradient(
+          180deg,
+          transparent,
+          var(--navy_opaque-background-color) 80%,
+          var(--dark-background-color) 100%
+        );
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 200%;
+        height: 200%;
+        bottom: 0%;
+        left: -50%;
+        background-image: radial-gradient(
+          transparent 45%,
+          var(--dark-background-color) 78%
+        );
+      }
+    }
+
+    & .grid-action {
+      position: absolute;
+      height: auto;
+      width: fit-content;
+      bottom: 3em;
+      left: 5.5em;
+      padding: 0.3em;
+      cursor: pointer;
+      display: flex;
+      text-align: center;
+      flex-wrap: nowrap;
+      gap: 0.7em;
+
+      & .grid-action_text {
+        height: auto;
+        width: auto;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      & .grid-action_icon {
+        height: 20px;
+      }
+
+      &:hover {
+        color: var(--accent-color);
+        outline-color: var(--accent-color);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+}
+
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (max-width: 767px) {
+  .landing {
+    & .app-container {
+      & .grid-greet {
+        & p.grid-greet_p {
+          font-size: 1.3rem;
+        }
+      }
+      & .grid-image {
+        background-position: center bottom;
+        background-size: cover;
+
+        &::before {
+          opacity: 0.1;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .landing {
+    & .app-container {
+      & .grid-branding {
+        position: absolute;
+        bottom: 0rem;
+      }
+
+      & .grid-greet {
+        position: absolute;
+        padding: 0 0.5em;
+        & > * {
+          text-align: center;
+        }
+      }
+
+      & .grid-action {
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@keyframes slide-left-right {
+  0% {
+    transform: translateX(-5dvw);
+  }
+  100% {
+    transform: translateX(-45dvh);
+  }
+}
+
+@keyframes slide-top-bottom {
+  0% {
+    transform: translateY(-5dvh);
+  }
+  100% {
+    transform: translateY(-45dvh);
+  }
+}
