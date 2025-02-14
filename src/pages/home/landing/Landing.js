@@ -1,7 +1,5 @@
 import './Landing.css'
 
-//
-import History from '../history/History'
 // Media & Icons
 import action_icon from './../../../compx/icons/icons8-arrow-down.gif'
 
