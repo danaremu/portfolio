@@ -65,7 +65,7 @@
     min-height: calc(50dvh + 25px);
     width: auto;
     top: 0;
-    right: 0;
+    right: 1rem;
     display: flex;
     align-items: stretch;
     flex-direction: column;

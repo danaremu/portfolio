@@ -41,6 +41,7 @@
       align-self: flex-end;
       margin-bottom: 2rem;
       font-size: 0.8rem;
+      left: 1rem;
 
       &::after,
       &::before {
@@ -182,6 +183,10 @@
           font-size: 1.3rem;
         }
       }
+
+      & .grid-branding {
+      }
+
       & .grid-image {
         background-position: center bottom;
         background-size: cover;
