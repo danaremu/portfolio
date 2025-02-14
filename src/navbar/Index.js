@@ -7,24 +7,14 @@ const Index = () => {
   return (
     <nav>
       <div className='app-container'>
-        <img src={portfolio_logo} className='nav-logo' />
+        <img src={portfolio_logo} alt={'portfolio logo'} className='nav-logo' />
         <div className='nav-menu'>
           <ul className=''>
-            <a>
-              <li>nexus</li>
-            </a>
-            <a>
-              <li>code vault</li>
-            </a>
-            <a>
-              <li>prologue</li>
-            </a>
-            <a>
-              <li>history</li>
-            </a>
-            <a>
-              <li>contact</li>
-            </a>
+            <li>nexus</li>
+            <li>code vault</li>
+            <li>prologue</li>
+            <li>history</li>
+            <li>contact</li>
           </ul>
         </div>
       </div>

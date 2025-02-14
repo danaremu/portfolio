@@ -31,7 +31,11 @@ const Index = () => {
         </div>
         <div className='grid-action'>
           <span className='grid-action_text'>Scroll down</span>
-          <img src={action_icon} className='grid-action_icon' />
+          <img
+            src={action_icon}
+            alt={'action button'}
+            className='grid-action_icon'
+          />
         </div>
       </div>
     </div>
