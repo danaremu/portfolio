@@ -17,6 +17,7 @@
 
     &::before {
       background-color: var(--light-background-color);
+      opacity: 0;
     }
   }
 
