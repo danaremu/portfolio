@@ -7,33 +7,9 @@ nav {
   color: var(--smoke-color);
   z-index: 300;
   padding: 0.3rem 0;
-
   animation: color-in linear forwards;
   animation-timeline: scroll();
-  animation-range: 60dvh 100dvh;
-
-  &::before,
-  &::after {
-    position: absolute;
-    content: '';
-    animation: fade-in linear forwards;
-    animation-timeline: scroll();
-    animation-range: 50dvh 100dvh;
-    opacity: 0;
-  }
-
-  &::before {
-    inset: 0;
-    background-color: var(--smoke-color);
-  }
-
-  &::after {
-    height: 1px;
-    width: calc(100% - 20px);
-    bottom: 0px;
-    background-color: var(--mute-background-color);
-    left: 10px;
-  }
+  animation-range: calc(100dvh - 5px) calc(100dvh + 5px);
 
   & .app-container {
     width: min(100%, var(--width-XL));
@@ -139,7 +115,7 @@ nav {
           white-space: nowrap;
 
           &:hover {
-            background-color: blue;
+            background-color: var(--navy-background-color);
           }
         }
       }
@@ -152,57 +128,10 @@ nav {
 }
 
 @media only screen and (max-width: 768px) {
-  .landing {
-    & .main_grid {
-      overflow: hidden;
-      gap: 4rem;
-      /* background-color: rgb(255, 51, 0); */
-    }
-    & .side_grid {
-      position: relative;
-      height: auto;
-      min-height: inherit;
-      width: 450px;
-      padding: 0;
-      margin: 0;
-      background-color: blue;
-
-      display: grid;
-      grid-template-columns: repeat(3, auto);
-      flex-wrap: nowrap;
-      gap: 0;
-
-      & .side_grid-item {
-        width: 100%;
-        /* aspect-ratio: 1; */
-        color: white;
-        padding: 0;
-        margin: 0;
-
-        &:nth-child(odd) {
-          background-color: black;
-        }
-      }
-    }
-  }
 }
 
 @media only screen and (max-width: 600px) {
-  .landing {
-    & .main_grid {
-      overflow: hidden;
-      gap: 1.5rem;
-      /* background-color: rgb(255, 51, 0); */
-    }
-  }
 }
 
 @media only screen and (max-width: 480px) {
-  .landing {
-    & .main_grid {
-      overflow: hidden;
-      gap: 1.5rem;
-      /* background-color: rgb(255, 51, 0); */
-    }
-  }
 }

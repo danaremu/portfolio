@@ -2,30 +2,178 @@
   position: relative;
   height: auto;
   min-height: 100dvh;
-  top: calc(var(--navbar-height) * -1);
   width: 100%;
   color: var(--smoke-color);
-  background-color: var(--dark-background-color);
 
   &::before {
     position: absolute;
     content: '';
     inset: 0;
-    background-image: linear-gradient(
-      180deg,
-      var(--navy_opaque-background-color),
-      var(--dark-background-color)
-    );
-    display: none;
+    background-color: var(--dark-background-color);
+  }
+
+  & .navCover {
+    background-color: var(--light-background-color);
+
+    &::before {
+      background-color: var(--light-background-color);
+    }
   }
 
   & .app-container {
-    min-height: inherit;
-    /* display: flex;
-    align-items: stretch;
-    justify-content: stretch;
-    flex-wrap: nowrap;
-    gap: 5rem; */
+    min-height: auto;
+  }
+
+  & .about-content-info {
+    position: relative;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+
+    & .about-content-info_item {
+      position: relative;
+      height: auto;
+      width: 100%;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: nowrap;
+      align-items: start;
+
+      & .about-content-dp {
+        height: auto;
+        width: 350px;
+        background-color: var(--smoke-color);
+
+        & .about-content-img {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 1;
+          background-color: var(--smoke-color);
+          background-image: url('./../../../compx/media/Coding.jpeg');
+          background-size: cover;
+          background-position: center;
+        }
+
+        &::after {
+          position: absolute;
+          content: '';
+          width: 100%;
+          aspect-ratio: 1;
+          top: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        & .about-content-text {
+          color: var(--dark-color);
+          position: relative;
+          height: auto;
+          min-height: 150px;
+          width: 100%;
+          padding: 0.5em;
+
+          & p {
+            padding: 0;
+            margin: 0;
+          }
+        }
+
+        & ul {
+          position: relative;
+          margin: 0;
+          padding: 0;
+          display: inline;
+
+          & li {
+            white-space: nowrap;
+            width: auto;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+          }
+        }
+      }
+      & .about-content-context {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & .about-content-context-stacks,
+        .about-content-context-select {
+          width: 100%;
+          height: auto;
+          padding: 1rem;
+          min-height: 60px;
+        }
+
+        & .about-content-context-stacks {
+          background-color: transparent;
+          border: 1px solid var(--smoke-color);
+        }
+
+        & .about-content-context-select {
+          border-radius: 0.5rem;
+          overflow: hidden;
+
+          & p {
+            color: var(--dark-color);
+            font-weight: bold;
+            text-transform: capitalize;
+            margin: 0;
+            padding: 0;
+          }
+
+          & .stacks_row {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 2rem;
+            margin: 1rem 0.5rem 2rem 0.5rem;
+            background: grey;
+
+            & .stacks_item {
+              height: 40px;
+              width: 40px;
+              border-radius: 0.4rem;
+              background: var(--smoke-background-color);
+              display: flex;
+              justify-content: center;
+              cursor: pointer;
+
+              &::before {
+                position: absolute;
+                content: '';
+                width: calc(100% + 6px);
+                height: calc(100% + 6px);
+                left: -4px;
+                top: -4px;
+                border: 1px solid var(--smoke-background-color);
+                border-radius: 0.5rem;
+              }
+
+              &::after {
+                position: relative;
+                content: attr('data-stack');
+                height: fit-content;
+                width: fit-content;
+                white-space: nowrap;
+                color: var(--dark-color);
+                margin-top: calc(100% + 0.5rem);
+                font-weight: bold;
+              }
+            }
+          }
+
+          &::before {
+            position: absolute;
+            content: '';
+            inset: 0;
+            background-color: var(--smoke_opaque-background-color);
+          }
+        }
+      }
+    }
   }
 }
 
