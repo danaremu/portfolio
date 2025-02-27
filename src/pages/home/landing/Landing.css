@@ -6,13 +6,10 @@
   color: var(--smoke-color);
   padding: 0;
   margin-top: calc(var(--navbar-height) * -1);
-
   background-image: url('./../../../compx/media/background__img.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  /* color: black; */
 
   &::before {
     position: absolute;
@@ -23,8 +20,7 @@
       var(--navy_opaque-background-color),
       var(--dark-background-color)
     );
-    opacity: .8;
-    /* display: none; */
+    opacity: 0.8;
   }
 
   & .navCover {
@@ -41,18 +37,6 @@
     margin-top: 0;
     overflow: hidden;
 
-    /* width: 100%; */
-
-    & .app-container {
-      display: flex;
-      align-items: stretch;
-      flex-wrap: nowrap;
-      gap: 5rem;
-      padding: 0;
-      margin-top: 0;
-      overflow: hidden;
-    }
-
     & .grid-branding {
       width: auto;
       height: calc(100dvh - 50px - 6rem);
@@ -64,8 +48,9 @@
       margin-bottom: 2rem;
       font-size: 0.8rem;
       left: 1rem;
+      gap: 1rem;
 
-      &::after,
+      /* &::after,
       &::before {
         position: relative;
         white-space: nowrap;
@@ -80,12 +65,20 @@
         content: attr(data-title);
         white-space: nowrap;
         padding-bottom: 0.5rem;
+      } */
+
+      & .grid-branding_year {
+        height: auto;
       }
 
       & .grid-branding_line {
         height: 100%;
         width: 2px;
         background-color: var(--smoke-background-color);
+      }
+
+      & .grid-branding_title {
+        height: auto;
       }
     }
 
@@ -121,17 +114,11 @@
       min-height: inherit;
       width: calc(100vw + (2 * var(--navbar-height)));
       width: 100vw;
-
-      /* position: relative; */
-      /* height: 100dvh; */
-      /* aspect-ratio: 1; */
-
       right: 0;
       padding: 0;
       order: 3;
       z-index: 0;
       background-color: transparent;
-      /* background-color: red; */
       background-image: url('./../../../compx/media/portfolio-img_clear.png');
       background-position: right bottom;
       background-size: contain;
@@ -145,7 +132,6 @@
         content: '';
         inset: 0;
         bottom: -2px;
-        /* opacity: 0.45; */
         background-image: linear-gradient(
           180deg,
           transparent,
@@ -204,13 +190,6 @@
 }
 
 @media only screen and (max-width: 1199px) {
-  .landing {
-    & .app-container {
-      & .grid-image {
-        /* background-color: red; */
-      }
-    }
-  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -223,9 +202,6 @@
         & p.grid-greet_p {
           font-size: 1.3rem;
         }
-      }
-
-      & .grid-branding {
       }
 
       & .grid-image {
