@@ -55,7 +55,6 @@ nav {
         font-size: 1.2rem;
         font-weight: bold;
         user-select: none;
-        color: var(--smoke-color);
         cursor: pointer;
 
         top: 100dvh;
