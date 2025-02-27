@@ -15,11 +15,16 @@ const Index = () => {
         data-year='2025'
         data-title='Software Engineer || AI & ML Developer || Data Engineer'
       >
-        <div className='grid-branding_year'>2025</div>
-        <div className='grid-branding_line'></div>
         <div className='grid-branding_title'>
-          Software Engineer || AI & ML Developer || Data Engineer
+          {/* Software Engineer || AI & ML Developer || Data Engineer */}
+          <span>Software Engineer</span>
+          <br />
+          <span>AI & ML Developer</span>
+          <br />
+          <span>Data Engineer</span>
         </div>
+        <div className='grid-branding_line'></div>
+        <div className='grid-branding_year'>2025</div>
       </div>
       <div className='grid-greet'>
         <h1 className='grid-greet_h1'>
