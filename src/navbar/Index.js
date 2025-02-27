@@ -11,9 +11,9 @@ const Index = () => {
         <div className='nav-menu'>
           <ul className=''>
             <li>nexus</li>
-            <li>code vault</li>
+            <li>codevault</li>
             <li>prologue</li>
-            <li>history</li>
+            <li>contact</li>
             <li>contact</li>
           </ul>
         </div>

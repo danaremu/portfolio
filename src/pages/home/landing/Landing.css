@@ -7,10 +7,12 @@
   padding: 0;
   margin-top: calc(var(--navbar-height) * -1);
 
-  background-image: url('./../../../compx/media/background_img.jpg');
+  background-image: url('./../../../compx/media/background__img.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  /* color: black; */
 
   &::before {
     position: absolute;
@@ -21,6 +23,8 @@
       var(--navy_opaque-background-color),
       var(--dark-background-color)
     );
+    opacity: .8;
+    /* display: none; */
   }
 
   & .navCover {
@@ -36,6 +40,18 @@
     padding: 0;
     margin-top: 0;
     overflow: hidden;
+
+    /* width: 100%; */
+
+    & .app-container {
+      display: flex;
+      align-items: stretch;
+      flex-wrap: nowrap;
+      gap: 5rem;
+      padding: 0;
+      margin-top: 0;
+      overflow: hidden;
+    }
 
     & .grid-branding {
       width: auto;
@@ -105,17 +121,24 @@
       min-height: inherit;
       width: calc(100vw + (2 * var(--navbar-height)));
       width: 100vw;
+
+      /* position: relative; */
+      /* height: 100dvh; */
+      /* aspect-ratio: 1; */
+
       right: 0;
       padding: 0;
+      order: 3;
+      z-index: 0;
       background-color: transparent;
+      /* background-color: red; */
       background-image: url('./../../../compx/media/portfolio-img_clear.png');
       background-position: right bottom;
-      /* background-position: center bottom; */
       background-size: contain;
       background-repeat: no-repeat;
       bottom: 0;
       overflow: hidden;
-      filter: grayscale(0.6);
+      /* filter: grayscale(0.6); */
 
       &::before {
         position: absolute;
