@@ -24,7 +24,7 @@
 
   /* COLORS OPAQUE */
   --dark_opaque-background-color: rgba(0, 0, 0, 0.7);
-  --navy_opaque-background-color: rgba(0, 40, 58, 0.7);
+  --navy_opaque-background-color: rgba(0, 40, 58, 0.6);
   --smoke_opaque-background-color: rgba(248, 248, 248, 0.7);
   --light_opaque-background-color: r gba(255, 255, 255, 0.7);
   --mute_opaque-background-color: rgba(123, 123, 123, 0.7);
@@ -188,6 +188,10 @@ section {
       opacity: 0;
       animation: navbar-growin linear forwards;
       animation-timeline: scroll();
+      -moz-animation-timeline: scroll();
+      -ms-animation-timeline: scroll();
+      -o-animation-timeline: scroll();
+      -webkit-animation-timeline: scroll();
       animation-range: calc(100dvh - (var(--navbar-height) / 2)) 100dvh;
     }
   }

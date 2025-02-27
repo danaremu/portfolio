@@ -20,7 +20,7 @@
       var(--navy_opaque-background-color),
       var(--dark-background-color)
     );
-    opacity: 0.8;
+    opacity: 1;
   }
 
   & .navCover {
@@ -64,6 +64,10 @@
         writing-mode: sideways-lr;
         height: auto;
         white-space: nowrap;
+
+        & span {
+          writing-mode: sideways-lr;
+        }
       }
     }
 

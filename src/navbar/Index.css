@@ -8,6 +8,10 @@ nav {
   padding: 0.3rem 0;
   animation: color-in linear forwards;
   animation-timeline: scroll();
+  -moz-animation-timeline: scroll();
+  -ms-animation-timeline: scroll();
+  -o-animation-timeline: scroll();
+  -webkit-animation-timeline: scroll();
   animation-range: calc(100dvh - 5px) calc(100dvh + 5px);
 
   & .app-container {
